@@ -1,0 +1,3349 @@
+@charset "UTF-8";
+
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background: #D8E5EE;
+}
+
+/* hide scrollbar but allow scrolling */
+body::-webkit-scrollbar, #scrollDIVEmail::-webkit-scrollbar, #contentEmail::-webkit-scrollbar, #resultsFix::-webkit-scrollbar{
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-y: scroll; 
+	display: none; /* for Chrome, Safari, and Opera */
+}
+
+h1, h2, h3, h4, p{
+	color: #05004d;
+}
+
+h1, h2, h3, h4{
+	text-align: center;
+}
+
+h1{
+	font-size: 3em;
+	line-height: 1.5em;
+	letter-spacing: 3px;
+}
+
+h2{
+	font-size: 2.1em;
+	line-height: 1.1em;
+	letter-spacing: 3px;
+}
+
+h3{
+	font-size: 1.9em;
+	line-height: 1em;
+	font-weight: 200;
+	letter-spacing: 4.5px;
+}
+
+h4{
+	font-size: 1.8em;
+	font-weight: 600;
+	letter-spacing: 1.3px;
+	color: #05004d;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+p{
+	font-size: 1.4em;
+	line-height: 2em;
+	text-align: left;
+	letter-spacing: 1.6px;
+}
+
+/* Nav styling start */
+.navHeader{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	top: 0;
+	background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	z-index: 9999 !important;
+	-webkit-box-shadow: -1px 11px 5px -3px rgba(5,0,77,0.37);
+	-moz-box-shadow: -1px 11px 5px -3px rgba(5,0,77,0.37);
+	box-shadow: -1px 11px 5px -3px rgba(5,0,77,0.37);
+	z-index: 9;
+}
+
+.NavThird1, .NavThird2, .NavThird3{
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	float: left;
+}
+
+.NavThird1, .NavThird3{
+	width: 45%;
+}
+
+.NavThird2{
+	width: 10%;
+}
+/* Nav styling end */
+
+.mastheadCon{
+	position: fixed;
+	width: 100%;
+	top: 5vh;
+	z-index: -4;
+	float: left;
+}
+
+.mastheadCon1, .mastheadCon2{
+	position: relative;
+	float: left;
+	width: 33.33%;
+}
+
+.mastheadCon1{
+	height: 100vh;
+}
+
+.mastheadCon2{
+	height: auto;
+}
+
+.titleMast{
+	margin-top: 12% !important;
+}
+
+.paraConMQ{
+	padding-top: 9% !important;
+}
+
+.titleCon1, .titleCon2, .titleCon3{
+	top: 0;
+	left: 0;
+	position: relative;
+	float: left;
+	height: 60px;
+}
+
+.titleCon1, .titleCon3{
+	width: 20%;
+}
+
+.titleCon2{
+	width: 80%;
+}
+
+.shadowBox{
+	background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	/* neumorphic border */box-shadow:  10px 10px 20px #d5dbe415, -10px -10px 20px #eaf2fd17;
+}
+      
+.vidStyle{
+	border-radius: 20px !important;
+}
+
+/* qual slider start */
+.qualConCard{
+	position: relative;
+    top: 0;
+    left: 11.5%;
+    width: 73%;
+    height: 251px;
+}
+
+.qualCon20percent, .qualCon60percent{
+	position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.qualCon20percent{
+    height: 20%;
+}
+
+.qualCon60percent{
+    height: 60%;
+}
+
+.qualSlider{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 251px;
+	border: #fff 3px solid;
+	border-radius: 10px;
+    z-index: 3;
+	padding: 0;
+  	margin: 0;
+}
+
+.qualWrapper{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.qualSlide{
+    width: 569px;
+    cursor: pointer;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+    position: relative;
+	padding: 0;
+  	margin: 0;
+}
+
+#qualItems{
+    width: 10000px;
+    position: relative;
+    top: 0;
+    left: -569px;
+	height: 251px;
+}
+
+#qualItems.shifting{
+   transition: left .2s ease-out;
+}
+
+.qualControl{
+    position: absolute;
+    top: 48%;
+    width: 5px;
+    height: 5px;
+    border: 3px #fff solid;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.qualControl:hover {
+    background: #fff;
+    width: 5px;
+    height: 5px;
+    border-radius: 24px;
+    border: 3px #05004d solid;
+    z-index: 2;
+}
+
+.qualPrev, .qualNext{
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.qualPrev{
+    left: 10px;
+}
+
+.qualNext {
+    right: 10px;
+}
+
+.qualPrev:active, .qualNext:active{
+    transform: scale (0.9);
+}
+/* qual slider end */
+
+/* qual slider equitise start */
+.qualSliderequitise{
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 73.3% !important;
+	height: 550px;
+	border: #fff 3px solid;
+	background: rgba( 255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+	border-radius: 10px;
+	z-index: 3;
+	overflow: hidden;
+}
+  
+.qualWrapperequitise{
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.qualSlideequitise{
+	width: 550px;
+	height: 100%;
+	top: 0;
+	left: 23px;/* change left position to keep it centered across mobile */
+	cursor: pointer;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all .5s;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}  
+  
+  #qualItemsequitise{
+	width: 10000px;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: -550px;
+}
+  
+#qualItemsequitise.shifting{
+   transition: left .2s ease-out;
+}
+
+.qualConCardequitise{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+  
+.qualControlequitise{
+	position: absolute;
+	top: 48%;
+	width: 5px;
+	height: 5px;
+	border: 3px #fff solid;
+	border-radius: 20px;
+	z-index: 2;
+}
+  
+.qualControlequitise:hover {
+	background: #fff;
+	width: 5px;
+	height: 5px;
+	border-radius: 24px;
+	border: 3px #05004d solid;
+	z-index: 2;
+}
+  
+.qualPrevequitise, .qualNextequitise{
+	background-size: 22px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+  
+.qualPrevequitise{
+	left: 10px;
+}
+  
+.qualNextequitise{
+	right: 10px;
+}
+  
+.qualPrevequitise:active, .qualNextequitise:active {
+	transform: scale (0.9);
+}
+/* qual slider equitise end */
+
+
+/* BN banner start */
+.qualSliderBN{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 73.3% !important;
+    height: 550px;
+    border: #fff 3px solid;
+    border-radius: 10px;
+    z-index: 3;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background: rgba( 255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+} 
+
+.qualSlideBN{
+	width: 550px;
+	height: 100%;
+	top: 0;
+	left: 23px;/* change left position to keep it centered across mobile */
+	cursor: pointer;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all .5s;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+
+.qualWrapperBN{
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+  }
+
+.mobMRECBNbanner{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	align-content: center;
+	margin: 50px 0 0 50px;
+	background: #fff;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 77, 0.9);
+}  
+
+.ConCardBN{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+
+.vitCon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 100%;
+	height: 100%;
+} 
+
+.vitImg{
+	position: relative;
+	padding: auto;
+	margin: 8% auto auto auto;
+	width: 100%;
+	height: 100%;
+} 
+
+/* horizontal cloud element ani in BN banner style start */
+.bgElementCon{
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	position: absolute;
+	float: left;
+	overflow: hidden;
+}
+
+.bgElement1c{
+	position: relative;
+	animation: bgElement1anic;
+	animation-direction: forwards;
+	animation-duration: 260s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement1anic{
+	0%   {left: -310px; top: 0;}
+	100% {left: 300px; top: 0;}
+}
+  
+.bgElement2c{
+	position: relative;
+	animation: bgElement2anic;
+	animation-direction: forwards;
+	animation-duration: 80s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement2anic{
+	0%   {left: -300px; top: 5%;}
+	100% {left: 360px; top: 5%;}
+}
+
+.bgElement3c{
+	position: relative;
+	animation: bgElement3anic;
+	animation-direction: forwards;
+	animation-duration: 200s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement3anic{
+	0% {left: -350px; top: 10%;}
+	100% {left: 303px; top: 10%;}
+}
+
+.bgElement4c{
+	position: relative;
+	animation: bgElement4anic;
+	animation-direction: forwards;
+	animation-duration: 120s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement4anic{
+	0%   {left: -390px; top: 15%;}
+	100% {left: 295px; top: 15%;}
+}
+
+@keyframes bgElement5anic{
+	0%   {left: -320px; top: 25%;}
+	100% {left: 300px; top: 25%;}
+}
+
+  .bgElement5c{
+	position: relative;
+	animation: bgElement5anic;
+	animation-direction: forwards;
+	animation-duration: 90s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement6anic{
+	0%   {left: -310px; top: 28%;}
+	100% {left: 305px; top: 28%;}
+}
+
+.bgElement6c{
+	position: relative;
+	animation: bgElement6anic;
+	animation-direction: forwards;
+	animation-duration: 160s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement7anic{
+	0%   {left: -290px; top: 30%;}
+	100% {left: 290px; top: 30%;}
+}
+
+.bgElement7c{
+	position: relative;
+	animation: bgElement7anic;
+	animation-direction: forwards;
+	animation-duration: 260s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement8anic{
+	0%   {left: -290px; top: 35%;}
+	100% {left: 290px; top: 35%;}
+  }
+
+.bgElement8c{
+	position: relative;
+	animation: bgElement8anic;
+	animation-direction: forwards;
+	animation-duration: 160s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement9anic{
+	0%   {left: -315px; top: 40%;}
+	100% {left: 315px; top: 40%;}
+}
+
+.bgElement9c{
+	position: relative;
+	animation: bgElement9anic;
+	animation-direction: forwards;
+	animation-duration: 230s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement10anic{
+	0%   {left: -290px; top: 45%;}
+	100% {left: 300px; top: 45%;}
+}
+
+.bgElement10c{
+	position: relative;
+	animation: bgElement10anic;
+	animation-direction: forwards;
+	animation-duration: 180s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement11anic{
+	0%   {left: -290px; top: 50%;}
+	100% {left: 300px; top: 50%;}
+}
+
+.bgElement11c{
+	position: relative;
+	animation: bgElement11anic;
+	animation-direction: forwards;
+	animation-duration: 200s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bgElement12anic{
+	0%   {left: -290px; top: 55%;}
+	100% {left: 300px; top: 55%;}
+}
+
+.bgElement12c{
+	position: relative;
+	animation: bgElement11anic;
+	animation-direction: forwards;
+	animation-duration: 190s;
+	animation-iteration-count: infinite;
+}
+/* horizontal cloud element ani in BN banner style end */
+
+/* circle clip and contents on front cover start */
+.coverClip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+	clip-path: circle(48% at 50% 50%);
+  	background: linear-gradient(to top, #adc1fc 10%, #6a8cff 50%, #3251ff 100%);
+}
+
+.coverClipCres, .coverClipCres2{
+	position: absolute;
+	width: 40%;
+	pointer-events: none;
+}
+
+.coverClipCres{
+  	width: 30%;
+    height: 100%;
+    top: 5%;
+    left: 9%;
+}
+
+.coverClipCres2{
+  	width: 50%;
+    height: 150% !important;
+    top: 10%;
+    left: 45%;
+	opacity: .3;
+}
+
+.clipShadow{
+	position: relative;
+	width: 98%;
+    height: 98%;
+    top: 1%;
+    left: 1%;
+	border-radius: 50%;
+	box-shadow: inset 5px 5px 8px #00000020, inset -5px -5px 10px #ffffffd6, 10px 20px 15px #00000010;
+	-webkit-box-shadow: inset 5px 5px 8px #00000020, inset -5px -5px 10px, 10px 20px 15px #00000010;
+	-moz-box-shadow: inset 5px 5px 8px #00000020, inset -5px -5px 10px, 10px 20px 15px #00000010;
+	box-shadow: inset 5px 5px 8px #00000020, inset -5px -5px 10px #ffffffc6, 10px 20px 15px #00000010;
+	pointer-events: none;
+}
+
+.box{
+	width: 200px; height: 300px;
+	position: relative;
+	border: 1px solid #BBB;
+	background: #EEE;
+}
+.ribbon{
+	position: absolute;
+	right: -5px; top: -5px;
+	z-index: 1;
+	overflow: hidden;
+	width: 75px; height: 75px;
+	text-align: right;
+}
+.ribbon span{
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	width: 100px;
+	display: block;
+	background: #79A70A;
+	background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+	box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+	position: absolute;
+	top: 19px; right: -21px;
+}
+.ribbon span::before{
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #79A70A;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #79A70A;
+}
+
+.ribbon span::after{
+	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #79A70A;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #79A70A;
+}
+
+.ribbonBNlogo{
+    width: 60%;
+    position: absolute;
+    margin: -115px auto auto -10px;
+    text-align: center;
+    font-size: 3.5em !important;
+    background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+    box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
+    font-family: 'Helvetica Neue',Helvetica, sans-serif;
+}
+
+.ribbonBNlogo p{
+    font-size: 25px !important;
+    color: #801111;
+    text-shadow: #D65C5C 0 1px 0;
+    margin: 0;
+    padding: 15px 10px;
+}
+
+.codeBox{
+	top: -93%;
+	left: 80%;
+	position: relative;
+	width: 20%;
+	height: 20%;
+	float: left;
+}
+
+.infoBox{
+	position: relative;
+	text-align: center;
+	top: 12.5%;
+	margin: auto;
+	padding: auto;
+	width: 50%;
+	height: auto;
+}
+/* BN banner end */
+
+/* email start */
+.fixedEmail{
+	top: 0;
+	left: 0;
+	margin: 0;
+	height: auto;
+  	width: 100%;
+	background: #fff;
+  	position: relative;
+}
+
+#scrollDIVEmail{
+	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+	height: 1580px;
+  	overflow: auto;
+  	cursor: pointer;
+  	float: left;
+}
+
+#contentEmail{
+	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	width: 100%;
+ 	height: 5410px;
+ 	border-radius: 15px;
+ 	float: left;
+}
+
+/* inline email style start */
+/* hide scrollbar but allow scrolling */
+#NoScroll::-webkit-scrollbar{
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-y: scroll; 
+	display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* hide scrollbar but allow scrolling */
+.email-container::-webkit-scrollbar{
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-y: scroll; 
+}
+
+/* What it does: Stops email clients resizing small text. */
+*{
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Forces Outlook.com to display emails full width. */
+.ExternalClass{
+	width: 100%;
+}
+
+/* What is does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"]{
+	margin: 0 !important;
+}
+
+center{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	float: left;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables */
+table, td{
+	mso-table-lspace: 0pt !important;
+	mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper */
+table{
+	border-spacing: 0 !important;
+	border-collapse: collapse !important;
+	table-layout: fixed !important;
+	margin: 0 auto !important;
+}
+
+table table table{
+	table-layout: auto;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE */
+img{
+	-ms-interpolation-mode: bicubic;
+}
+
+/* What it does: Overrides styles added when Yahoo's auto-senses a link */
+.yshortcuts a{
+	border-bottom: none !important;
+}
+
+/* What it does: Another work-around for iOS meddling in triggered links */
+a[x-apple-data-detectors]{
+	color: inherit !important;
+}
+
+/* DealBtn styling */	
+.DealBtn{
+	width: 30px;
+	height: 20px;
+	align-content: center;
+	text-align: center;
+	background-color: #6364ff !important; 
+	text-align: center;
+	color: #f6f7f4 !important;
+}	
+
+.DealBtn:hover{
+	background-color: #05004D !important; 
+	color: #fff !important;
+	cursor: pointer;
+}
+
+.ig:hover{
+	background-image: url(https://lisagraph.github.io/IGbluePurple/6364ffIG.png);
+	background-size: 2.15vw auto;
+	/* x% y% - The x value is the horizontal position y value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If only 1 value is specified, the other value will be 50%. Default value is: 0% 0% */
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	z-index: .9;
+	border-radius: 25px;
+}
+
+.fb:hover{
+	background-image: url(https://lisagraph.github.io/FBbluePurple/6364ffFB.png);
+	background-size: 2.5vw auto;
+	/* x% y% - The x value is the horizontal position y value is the vertical. The top left corner is 0% 0%. The right bottom corner is 100% 100%. If only 1 value is specified, the other value will be 50%. Default value is: 0% 0% */
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	z-index: .9;
+	border-radius: 25px;
+}
+
+.phone, .email{
+	color: #05004d; 
+	background-color: #f6f7f4;  
+	padding: 0 3px;
+	border-radius: 15px;
+	text-decoration: none !important;
+}
+
+.phone:hover, .email:hover{
+	color: #f6f7f4; 
+	background-color: #6364ff;  
+	text-decoration: none !important;	
+}
+	
+/* star rating style - start */
+#rating { font-size: 0; }
+#rating div { font-size: 25px; }
+#rating div::before { content: "☆"; }
+#rating div.active::before {content: "★"; color: #6364ff; }
+#rating div:hover { cursor: pointer; }
+/* star rating style - end */
+
+/* Media Queries */
+
+/* iPhone15 - 1179x2256 px */
+@media screen and (max-width: 1366px){
+
+.email-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 100%;
+	height: 6000px;
+}
+
+.fluid, .fluid-centered{
+	max-width: 100% !important;
+	height: auto !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}	
+
+.fluidSocial{
+	max-width: 15% !important;
+	height: auto !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding: auto;
+}
+
+.fluid-centered {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.stack-column, .stack-column-center{
+	display: block !important;
+	width: 100% !important;
+	direction: ltr !important;
+}	
+
+.stack-column-center{
+	text-align: center !important;
+}
+
+.center-on-narrow{
+	text-align: center !important;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	float: none !important;
+}
+
+table.center-on-narrow{
+	display: inline-block !important;
+}	
+
+.DealBtnQ{
+	width: 350px !important;
+	height: 30px;
+	margin: 20px auto !important; 
+	font-size: 2em !important;
+	line-height: .1em !important;
+	letter-spacing: 2px;
+	padding: 20px 0 !important;
+	border-radius: 50px !important;
+}
+
+.DealBtnQ:hover{
+	padding: 20px 0 !important;
+}
+
+.fluidImgQ{
+	margin: 0 auto 20px auto !important; 
+}
+
+.fluidLogoQ{
+	margin: 20px auto !important;  
+}
+
+/* star resize */
+label{
+	width: 1.5vw;
+	height: 1.3vh;
+}
+
+}	
+
+@media screen and (max-width: 600px) {
+
+.email-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 100%;
+	height: 6000px;
+}	
+
+.fixed{
+	margin: 0 !important;
+	height: 150vh;
+	top: 50px;
+	left: 25.5%;
+	overflow: hidden;
+}
+
+.fluid, .fluid-centered{
+	max-width: 100% !important;
+	height: auto !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}	
+
+.fluid-centered {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.stack-column, .stack-column-center{
+	display: block !important;
+	width: 100% !important;
+	direction: ltr !important;
+}	
+
+.stack-column-center{
+	text-align: center !important;
+}
+
+.center-on-narrow{
+	text-align: center !important;
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	float: none !important;
+}
+
+table.center-on-narrow{
+	display: inline-block !important;
+}	
+
+/* DealBtn resize */	
+.DealBtn, .DealBtnQ{
+	position: relative;
+	margin: 20px 0 20px 20px;
+	width: 190px;	
+	padding: 10px 25px;
+	background-color: #6364ff !important;
+}
+
+/* star resize */
+label{
+	width: 2.6vw;
+	height: 1.3vh;
+}
+
+.envelopeBack, .envelopeFront{
+	width: 100%;
+	height: auto;
+}
+
+}
+/* inline email style end */                
+
+/* emailHeroBanner ani start */
+#emailHeroBanner{
+    animation-name: emailHeroAni;
+    animation-duration: 40s;
+	animation-iteration-count: infinite;
+    /* none / forward / backward / both */
+    animation-fill-mode: forwards ;
+}	
+	
+@keyframes emailHeroAni{
+ 0%{ 
+	background: transparent;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 16px;
+} 
+25%{ 
+	background: #6364ff;
+	backdrop-filrgba: (130, 255, 253, 0.829);
+	-webkit-backdrop-filter: blur(10px);
+} 
+75%{ 
+	background: #05004d;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}            
+100%{ 
+    color: #6364ff; 
+	background: transparent; 
+} 
+	
+}
+/* emailHeroBanner ani end */
+
+/* account start */
+.qualWrapperSignUp{
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.accountContainer{
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+}
+
+.accountConStyle{
+	top: 0;
+	left: 0;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	z-index: 6 !important;
+	pointer-events: none;
+	cursor: pointer;
+	background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border-radius: 10px;
+	box-shadow: inset 5px 3px 8px #00026f38, inset -4px -4px 10px #fff, 2px 2px 2px #00026f05;
+}
+
+.accountCon{
+	width: 92%;
+	position: relative;
+	z-index: 1;
+}
+
+.accountWrapper{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	border: #fff 3px solid;
+	border-radius: 10px;
+	z-index: 3;
+	background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.FirstName, .surname, .Email, .Password, .Country{
+	text-align: left !important;
+	left: 0;
+	font-size: 13px;
+	padding: auto;
+	color: #fff;
+}
+
+.FirstNameSignUp, .surnameSignUp, .EmailSignUp, .CountrySignUp{
+	text-align: left !important;
+	font-size: 13px;
+	padding: auto;
+}
+
+.account-menu a{
+	text-decoration: none;
+	border-radius: 25px;
+	display: block;
+}
+
+/* identity input fields style - type */
+input[type=text], select{
+	width: 100%;
+	height: 35px;
+	/* margin indicates space between labels */
+	margin: 1% 0;
+	/* padding indicates width/height of labels */
+	padding: auto;
+	text-indent: 20px;
+	display: block;
+	border: 3px #05004d solid;
+	background: transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+input[type=text]:hover{
+	background: #05004d; 
+	color: #fff;
+	border: 3px solid #6364ff;
+	opacity: 1;
+}
+
+/* submit button */
+input[type=submit]{
+	color: #fff;
+	background-color: #6364ff;
+	border: 3px solid #fff;
+	border-radius: 25px;
+	font-weight: 900 !important;
+	cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=select]:hover{
+	background-color: #fff;
+	color: #05004d;
+	border: 3px solid #6364ff;
+}
+
+.submitSignIn, .submitSignUp{
+	left: 35%;
+	width: 30%;
+	height: auto;
+	padding: 1.5% 1%;
+	margin: 2% auto;
+	background: #6364ff;
+	color: #fff;
+	border-radius: 25px;
+	text-align: center;
+	font-weight: 900;
+}
+
+.submitSignIn .submitSignUp{
+  	font-size: 1.3em;
+}
+
+.submitSignIn:hover, .submitSignUp:hover{
+  	background: #05004d;
+}
+
+.submitSignIn a, .submitSignUp a{
+  	color: #fff;
+}
+
+.submitSignIn:hover a, .submitSignUp:hover a{
+  	color: #fff;
+}
+
+/* inner container */
+div.account{
+	width: 95%;
+	height: auto;
+	margin: 2% auto;
+	padding: 0;
+	border-radius: 5px;
+	pointer-events: all;  
+}
+/* account end */
+
+/* search-bar for iPhone start */
+/* search-bar-div is search bar container */
+#search-bar-div{
+	position: relative;
+	margin: 2% auto;
+	width: 100%;
+	height: 10%;
+	left: 0;
+	z-index: 2;
+	text-decoration: none !important;
+	text-underline: transparent;
+}
+
+#search-bar{
+	-webkit-appearance: none;
+	width: 95%;
+	height: 35px;
+	/* padding is height of search bar */
+	padding: auto;
+	border: 3px solid #05004d;
+	border-radius: 5px;
+	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); */
+	/* text-indent is placeholder text's styling padding values */
+	text-indent: 20px;
+	transition: width .7s ease-in-out;
+	outline: #fff;
+	text-transform: capitalize;
+	text-decoration: none !important;
+}
+
+#search-bar:hover{
+	/* width is width on hover
+	width: 200px; */
+	background: #05004d;
+	color: #fff;
+	border: 3px solid #6364ff;
+}
+
+/* Close icon */
+.close{
+	position: absolute;
+	text-align: center;
+	margin-top: 2.5% !important;
+	left: 94.5% !important;
+	padding: 5px;
+	width: auto;
+	height: auto;
+	opacity: 0.8;
+	border-radius: 15%;
+	cursor: pointer;
+	background: #fff;
+	color: #05004d;
+	z-index: 2;
+}
+
+.close:hover{
+	background: #05004d;
+    color: #fff;
+}
+
+#results-div{
+	z-index: 100000 !important;
+}
+
+#results{
+	position: absolute;
+	width: 93.7%;
+	height: auto;
+	margin: 0;
+	background: #ebd8ee;
+	box-shadow: inset 5px 3px 8px #00026f38, inset -4px -4px 10px #fff, 2px 2px 2px #00026f05;
+	border-radius: 0 0 20px 20px;
+	border: 3px #fff solid;
+	padding: 20px; 
+}
+
+#results::before, #results::after{
+	content: "";
+	position: absolute;
+	background: #f0f6fb;
+}
+
+#results::before{
+	top: 3px;
+	left: 4px;
+	border-radius: 50% 40% 60% 5%/ 20% 10% 30% 10%;
+	width: 5px;
+	height: 5px;
+}
+
+#results::after{
+	top: 2px;
+	left: 3px;
+	border-radius: 50% 40% 60% 5% / 20% 10% 90% 90%;
+	width: 3px;
+	height: 53px;
+	opacity: .2;
+}
+
+/* scroll container for menu buttons start */
+#resultsFix{
+	top: 0;
+	left: 0;
+	position: relative;
+	width: 100%;
+	height: 600px;
+	overflow: scroll;
+}
+
+/* resultsScroll moving part inner */
+#resultsScroll{
+	top: 0;
+	left: 0;
+	margin-top: 30px;
+	width: 100%;
+	height: 700px;
+}
+
+.description a, .category a{
+  	color: #fff !important;
+}
+
+.description:hover, .category:hover{
+  	background: #fff !important;
+}
+
+.description:hover a, .category:hover a{
+  	color: #6364ff !important;
+}
+
+/* QR banner for iPhone start */
+
+/* QR code start */
+#QRcontainer{
+	/* margin indicates QR code coords */
+	margin: 0;
+}
+/* QR code end */
+
+.tooltiptext{
+	visibility: hidden;
+	width: auto;
+	background-color: #34FBFF;
+	color: #05004d;
+	text-align: center;
+	border-radius: 10px;
+	padding: 5px 0;
+	margin: 5% 0 0 5%;
+	position: absolute;
+	z-index: 1;
+}
+  
+.tooltip:hover .tooltiptext{
+	visibility: visible;
+}
+/* QR banner for iPhone end */
+
+/* iPhscrollDiv scroll container for iPhone start */
+/* CON are body row containers for iPhone start */
+
+.spDiv{
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+	height: 20px;
+}
+/* CON are body row containers for iPhone end */
+
+/* dimensionalCube style - start - this is Jordan Leigh's cube :) I hope he won't mind that I brought it here then altered it to learn to do what he's done, changed it to the Equitise style for their mockups then included it in my Portfolio */
+
+#dimensionalCubeWrapper{
+	padding-top: 18%; 
+}
+
+.viewport{
+	-webkit-perspective: 215px;
+	-moz-perspective: 215px;
+	-ms-perspective: 215px;
+	-o-perspective: 215px;
+	perspective: 215px;
+	-webkit-perspective-origin: 50% 50px;
+	-moz-perspective-origin: 50% 50px;
+	-ms-perspective-origin: 50% 50px;
+	-o-perspective-origin: 50% 50px;
+	perspective-origin: 50% 50px;
+	-webkit-transform: scale(1, 1);
+	-moz-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+	-webkit-box-reflect: below 170px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, 0.1))); 
+}
+
+.cube{
+	position: relative;
+	margin: 0 auto;
+	height: 120px;
+	width: 120px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: rotateX(136deg) rotateY(1050deg);
+	-moz-transform: rotateX(136deg) rotateY(1050deg);
+	-ms-transform: rotateX(136deg) rotateY(1050deg);
+	-o-transform: rotateX(136deg) rotateY(1050deg);
+	transform: rotateX(136deg) rotateY(1050deg); 
+}
+
+.cube > div{
+	overflow: hidden;
+	position: absolute;
+	opacity: 0.9;
+	height: 120px;
+	width: 120px;
+	/* make SVGs with bgs to replace bg image 
+	background-image: url("https://jordizle.com/static/img/codepen/blank.png");*/
+	-webkit-touch-callout: none;
+	-moz-touch-callout: none;
+	-ms-touch-callout: none;
+   	-o-touch-callout: none;
+	touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+}
+
+.cube > div > div.cubeLogoFace{
+	width: 120px;
+	height: 120px;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	-webkit-transition: color 600ms;
+	-moz-transition: color 600ms;
+	-ms-transition: color 600ms;
+	-o-transition: color 600ms;
+	transition: color 600ms;
+}
+
+.cube > div > div.cubeLogoFace.active{
+	color: #0500d4; 
+}
+
+.cube > div:hover{
+	cursor: pointer;
+}
+
+.cube > div:active{
+	cursor: pointer;
+}
+
+.cube > div:first-child{
+	-webkit-transform: rotateX(90deg) translateZ(60px);
+	-moz-transform: rotateX(90deg) translateZ(60px);
+	-ms-transform: rotateX(90deg) translateZ(60px);
+	-o-transform: rotateX(90deg) translateZ(60px);
+	transform: rotateX(90deg) translateZ(60px);
+	outline: 2px solid #fff;
+	border-radius: 1.5px;
+}
+
+.cube > div:nth-child(2){
+	-webkit-transform: translateZ(60px);
+	-moz-transform: translateZ(60px);
+	-ms-transform: translateZ(60px);
+	-o-transform: translateZ(60px);
+	transform: translateZ(60px);
+	outline: 2px solid #fff;
+	border-radius: 1.5px;
+}
+
+.cube > div:nth-child(3){
+  -webkit-transform: rotateY(90deg) translateZ(60px);
+  -moz-transform: rotateY(90deg) translateZ(60px);
+  -ms-transform: rotateY(90deg) translateZ(60px);
+  -o-transform: rotateY(90deg) translateZ(60px);
+  transform: rotateY(90deg) translateZ(60px);
+  outline: 2px solid #fff;
+  border-radius: 1.5px;
+}
+
+.cube > div:nth-child(4){
+  -webkit-transform: rotateY(180deg) translateZ(60px);
+  -moz-transform: rotateY(180deg) translateZ(60px);
+  -ms-transform: rotateY(180deg) translateZ(60px);
+  -o-transform: rotateY(180deg) translateZ(60px);
+  transform: rotateY(180deg) translateZ(60px);
+  outline: 2px solid #fff;
+  border-radius: 1.5px;
+}
+
+.cube > div:nth-child(5){
+  -webkit-transform: rotateY(-90deg) translateZ(60px);
+  -moz-transform: rotateY(-90deg) translateZ(60px);
+  -ms-transform: rotateY(-90deg) translateZ(60px);
+  -o-transform: rotateY(-90deg) translateZ(60px);
+  transform: rotateY(-90deg) translateZ(60px);
+  outline: 2px solid #fff;
+  border-radius: 1.5px;
+}
+
+.cube > div:nth-child(6){
+  -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(60px);
+  -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(60px);
+  -ms-transform: rotateX(-90deg) rotate(180deg) translateZ(60px);
+  -o-transform: rotateX(-90deg) rotate(180deg) translateZ(60px);
+  transform: rotateX(-90deg) rotate(180deg) translateZ(60px);
+  outline: 2px solid #fff;
+  border-radius: 1.5px;
+}
+
+object{
+	opacity: 1;
+}
+
+object:hover{
+	opacity: .5;
+}
+/* dimensionalCube style - end */
+
+/* milestone grid animated auto slider - start */
+.mileGrid1 > * {visibility: hidden; position: absolute;
+	top: 0; left: 0; animation: 20s autoplay1 infinite}
+
+@keyframes autoplay1 {
+	0% {visibility: visible}
+	20% {visibility: hidden}
+}
+
+.mileGrid1 > *:nth-child(1) {animation-delay: 0s}
+.mileGrid1 > *:nth-child(2) {animation-delay: 4s}
+.mileGrid1 > *:nth-child(3) {animation-delay: 8s}
+.mileGrid1 > *:nth-child(4) {animation-delay: 12s}
+.mileGrid1 > *:nth-child(5) {animation-delay: 16s}
+
+.mileGrid1, .mileGrid2, .mileGrid3, .mileGrid4, .mileGrid5{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	float: left; 
+}
+/* milestone grid animated auto slider - end */
+
+/* METCON - contains metrics don't lie stats - start */
+.MetricCon{
+	position: relative;
+	width: auto;
+	height: 205px;
+	margin: auto;
+	float: left;
+}
+
+.MetricHead{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	float: left;
+	border-radius: 20px 20px 0 0;
+}
+
+.MetGrid{
+	width: 100%;
+	height: 209px;
+	display: grid;
+  	/* grid-template-columns is width of columns */
+	grid-template-columns: 205px 205px 205px;
+  	/* grid-gap is width between columns */
+	grid-gap: 50px 50px;
+	/* padding is padding around the outside of columns */
+	padding: 0 0 0 0;
+}
+
+.MetGrid > div{
+	text-align: center;
+	/* padding is padding around text/content inside grid squares */
+	padding: 0;
+	font-weight: 600;
+	/* height is height of grid squares */
+	height: 205px !important;
+  	width: 205px;
+	border-radius: 5px;
+	border: 3px #fff solid;
+	box-shadow: inset 5px 3px 8px #00026f38, inset -4px -4px 10px #fff, 2px 2px 2px #00026f05;
+}
+
+.mileGridWrapper{
+	position: absolute;
+	margin: 0;
+	width: 205px;
+	height: 205px;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.mileGrid1, .mileGrid2, .mileGrid3, .mileGrid4, .mileGrid5{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	float: left; 
+}
+
+/* milestone grid animated auto slider - start */
+#mileGridWrapper > * {visibility: hidden; position: absolute;
+  	top: 0; left: 0; animation: 20s autoplay1 infinite}
+
+@keyframes autoplay1 {
+  	0% {visibility: visible}
+  	20% {visibility: hidden}
+}
+
+#mileGridWrapper > *:nth-child(1) {animation-delay: 0s}
+#mileGridWrapper > *:nth-child(2) {animation-delay: 4s}
+#mileGridWrapper > *:nth-child(3) {animation-delay: 8s}
+#mileGridWrapper > *:nth-child(4) {animation-delay: 12s}
+#mileGridWrapper > *:nth-child(5) {animation-delay: 16s}
+/* milestone grid animated auto slider - end */
+
+/* face style start */
+.success1, .success2{
+	position: relative;
+	margin: auto !important;
+	height: auto;
+  	width: auto;
+	font-size: 20px;
+  	letter-spacing: 1px;
+	text-align: center !important;
+	background: transparent;
+	border-radius: 20px;
+}  
+
+.success1{
+  	color: #6364ff;
+}
+
+.success1:hover{
+	color: #fff;
+	background: #6364ff;
+}
+
+.success2{
+  	color: #05004d;
+}
+
+.success2:hover{
+	color: #fff;
+	background: #05004d;
+}
+
+.face{
+	position: relative;
+	margin: 5% auto;
+	background: #FFD900;
+	width: 132px;
+	height: 132px;
+	border-radius: 50%;
+	border: 3px #fff solid;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.face::before{
+	content: '';
+	position: absolute;
+	top: 65%;
+	width: 55px;
+	height: 15px;
+	background: #f498bf;
+	border-bottom-left-radius: 100%;
+	border-bottom-right-radius: 100%;
+	transition: 0.5s;
+}
+
+.face:hover::before{
+	width: 18px;
+	height: 18px;
+	border-radius: 100%;
+}
+
+.eyes{
+	position: absolute;
+	display: flex;
+}
+
+.eyes .eye{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	display: block;
+	background: white;
+	border-radius: 50%;
+	margin: -40px 5px 0 5px;
+}
+
+.eyes .eye::before{
+	content: '';
+	position: absolute;
+	top: 30% !important;
+	left: 30%;
+	background: #05004d;
+	width: 9px;
+	height: 9px;
+	border: 4px #6364ff solid;
+	border-radius: 50%;
+}
+/* face style end */
+
+/* brand logo CONTAINER - deal card EXAMPLE */
+/* brand logo on deal card EXAMPLE */
+
+/* footer buttons start */
+.iPhbtnFoot{
+	position: sticky;
+	top: 0;
+	width: 20%;
+	height: 55px;
+	float: left;
+}
+
+.ftBtnCon{
+	position: relative;
+	width: 84%;
+	height: 100%;
+	top: 0;
+	margin-left: 31px;
+}
+
+.iPhbtnf1, .iPhbtnf2, .iPhbtnf3, .iPhbtnf4, .iPhbtnf5{
+	position: absolute;
+	width: 85%;
+	height: 30px;
+	background-color: #D8E5EE;
+	border: 3px solid #05004D;
+	border-radius: 25px;
+	top: 0;
+	left: 1.5px;
+	text-align: center;
+	color: #05004D;
+	line-height: 2.9em;
+	font-size: .65em;
+}
+
+.ftSocCon{
+	position: relative;
+	width: 85%;
+	height: 100%;
+	top: 0;
+	margin: auto;
+}
+
+.iPhbtnf1:hover, .iPhbtnf2:hover, .iPhbtnf3:hover, .iPhbtnf4:hover, .iPhbtnf5:hover{
+  	-webkit-box-shadow: -1px 6px 5px -3px rgba(5,0,77,0.37);
+  	-moz-box-shadow: -1px 6px 5px -3px rgba(5,0,77,0.37);
+  	box-shadow: -1px 6px 5px -3px rgba(5,0,77,0.37);
+}
+/* footer buttons end */
+
+/* social icons start */
+.ph1Social1, .ph1Social2, .ph1Social3, .ph1Social4{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 81.5px;
+	height: 78px;
+	float: left; 
+}
+/* social icons end */
+
+.iPhsvg{
+	width: 445px;
+	height: 770px;
+	z-index: 2;
+	position: absolute;
+	margin: -12px 0 0 -22px;
+	pointer-events: none;
+}
+/* iPhone style end */
+
+/* figures screen start */
+
+/* scrollscreens and containers start */
+.scrSpaceCol1, .scrSpaceCol2, .scrSpaceCol3{
+  	position: relative;
+  	top: 2vh;
+  	left: 0;
+  	width: 33.33%;
+  	float: left;
+  	align-content: center;	
+}
+
+.spaceDiv, .screenDiv{
+	position: relative;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+	float: left;
+}
+
+.spaceDiv{
+  	height: 100px;
+}
+
+.spaceDivMQ{
+	display: none;
+}
+
+.screenDiv{
+	height: 20px;
+}
+
+.paraCon{
+	position: relative;
+	width: 100%;
+	float: left;
+  	top: 0;
+  	left: 0;
+  	display: flex;
+  	justify-content: center;
+  	height: auto;
+  	cursor: pointer;
+}
+
+.paraConLogoInner{
+	position: relative;
+	top: 0;
+	width: 507px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	padding: 0 10px !important;
+}
+
+.ribbonLisa{
+    width: 265px;
+    height: auto;
+    position: absolute;
+    padding: auto;
+    margin: 195px auto auto auto;
+    text-align: center;
+    background: #c2d9ea;
+    background: linear-gradient(to bottom, #cae0ee, #b0cbe0);
+    box-shadow: rgba(0,0,0,0.3) 0 5px 5px;
+    font-family: 'Helvetica Neue',Helvetica, sans-serif;
+}
+
+.ribbonLisa p{
+    font-size: 1.8em !important;
+    color: #05004D;
+    text-shadow: #bad6ec 0 .5px 0;
+    margin: 0px;
+    padding: 2px 10px;
+}
+
+.ribbonLisa:before, .ribbonLisa:after{
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #c2d9ea;
+    z-index: -1;
+}
+
+.ribbonLisa:before{
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+
+.ribbonLisa:after{
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+
+.ribbonLisa .ribbonLisa-content:before, .ribbonLisa .ribbonLisa-content:after{
+    border-color: #8bbee5 transparent transparent transparent;
+    position: absolute;
+    display: block;
+    border-style: solid;
+    bottom: -1em;
+    content: '';
+}
+
+.ribbonLisa .ribbonLisa-content:before{
+    left: 0;
+    border-width: 1em 0 0 1em;
+}
+
+.ribbonLisa .ribbonLisa-content:after{
+    right: 0;
+    border-width: 1em 1em 0 0;
+}
+/* scrollscreens and containers end */
+
+.phoneUs1, .phoneUs2{
+	position: relative;
+	height: 385px;
+	top: 20px;
+	left: 0;
+	float: left;
+}
+
+.phoneUs1{
+	width: 20px;
+}
+
+.phoneUs2{
+	width: 410px;
+}
+
+/* tbh banner start */
+.mobMREC{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	align-content: center;
+	margin: 50px 0 0 50px;
+	background-color: #ffe0d9;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 77, 0.9);
+}
+
+.MREChead{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	float: left;
+	overflow: visible;
+	z-index: 3;
+}
+
+.MREChead1, .MREChead2, .MREChead3{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	float: left;
+	z-index: 3;
+	overflow: visible;
+}
+
+.MREChead1{
+	width: 30%;
+}
+
+.MREChead2{
+	width: 40%;
+	overflow: visible;
+}
+
+.MREChead3{
+	width: 30%;
+}
+
+.MRECcta{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	align-content: center;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+.MRECin1, .MRECin2, .MRECin3{
+	position: relative;
+	height: 290px;
+	top: 0;
+	left: 0;
+	float: left;
+	background-color: transparent;
+}
+
+.MRECin1{
+	width: 30%;
+}
+
+.MRECin2{
+	width: 40%;
+}
+
+.MRECin3{
+	width: 30%;
+}
+
+.MRECslider{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+	background-color: transparent;
+}
+
+.MRECRegCon{
+	text-decoration: none !important;
+	position: relative;
+	width: 100%;
+	top: 236.5px;
+	padding: 1% auto;
+	font-size: .75em;
+	background: #6364ff;
+	justify-content: center;
+	border-radius: 40px;
+	display: flex;
+	left: 0;
+	float: left;
+}
+
+.MRECRegCon a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.MRECRegCon:hover{
+	background: #fff;
+	color: #6364ff;
+}
+
+.MRECRegCon:hover a{
+	background: #fff;
+	color: #6364ff;
+}
+
+.MRECHeadingCon{
+	position: relative;
+	width: 100%;
+	top: 20px;
+	height: auto;
+	margin: auto;
+	justify-content: center;
+	display: flex;
+	left: 0;
+	float: left;
+}
+
+.MRECellipse{
+	position: absolute;
+	width: 210px;
+	height: 210px;
+	align-content: center;
+	margin: 104px 120px 0 120px;
+	border-radius: 50%;
+	border: 3px #fff solid;
+	background-color: transparent;
+	opacity: .6;
+	pointer-events: none;
+	z-index: 3;
+}
+
+.TBHslider{
+  	position: absolute;
+  	top: 25.1%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	width: 450px;
+  	height: 140px;
+  	background-color: transparent;
+	z-index: 3;
+}
+
+.TBHwrapper{
+  	overflow: hidden;
+  	position: relative;
+  	background: transparent;
+  	z-index: 1;
+}
+
+#TBHitems{
+  	width: 10000px;
+  	position: relative;
+  	top: 0;
+  	left: -450px;
+}
+
+#TBHitems.shifting{
+  	transition: left .2s ease-out;
+}
+
+.TBHslide{
+  	width: 450px;
+  	height: 216px;
+  	top: 0;
+  	cursor: pointer;
+  	float: left;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	transition: all 1s;
+  	position: relative;
+  	background: transparent;
+}
+
+.TBHcontrol{
+  	position: absolute;
+  	top: 50%;
+  	width: 5px;
+  	height: 5px;
+  	margin: 40px 0 0 30px;
+  	border: 3px #fff solid;
+  	border-radius: 20px;
+  	opacity: .6;
+  	z-index: 2;
+}
+
+.TBHcontrol:hover{
+  	background: transparent;
+  	width: 5px;
+  	height: 5px;
+  	border-radius: 24px;
+  	border: 3px #FF596C solid;
+  	z-index: 2;
+}
+
+.TBHprev, .TBHnext{
+  	background-size: 22px;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	cursor: pointer;
+}
+
+.TBHprev{
+  	left: 60px;
+}
+
+.TBHnext{
+  	right: 85px;
+}
+
+.TBHprev:active, .TBHnext:active{
+  	transform: scale(0.9);
+}
+
+.MRECfoot{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	float: left;
+	background-color: transparent;
+}
+
+.TBHdisCon{
+	position: absolute;
+	width: 100%;
+	height: 52px;
+	bottom: 3px;
+	left: 0;
+	float: left;
+	background-color: transparent;
+}
+
+.TBHdisSVG{
+	position: absolute;
+	width: 100%;
+	height: 52px;
+	bottom: 0;
+	left: 0;
+	float: left;
+	background-color: transparent;
+}
+
+#disCon a{
+	background-color: #fff;
+	text-decoration: none;
+	color: #05004d;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.disCon{
+	position: relative;
+	width: 450px;
+	height: 50px;
+	bottom: 5px;
+	left: 0;
+	float: left;
+}
+
+.disPara{
+	position: relative;
+	width: 80%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+	text-align: left;
+	font-size: 8px;
+	color: #fff;
+}
+
+.phoneUs{
+	text-decoration: none;
+	background-color: #fff;
+	color: #05004d;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.phoneUs:hover{
+	background-color: #05004d;
+	color: #fff;
+}
+
+.phoneUs:hover a{
+	background-color: #05004d;
+	color: #fff;
+}
+
+#CSFlink, #RWlink{
+	background-color: #fff;
+	text-decoration: none;
+	color: #05004d;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#CSFlink:hover, #RWlink:hover{
+	background-color: #05004d;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+}
+/* tbh banner end */
+
+/* eGotU banner start */
+.mobMRECeGot{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	align-content: center;
+	margin: 50px 0 0 50px;
+	background-color: #05004d;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 77, 0.9);
+}
+
+.mobMRECphoneUs{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	align-content: center;
+	margin: 50px 0 0 50px;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 77, 0.9);
+	pointer-events: none !important;
+}
+
+.MRECheadeGot, .MRECseceGot{
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+	z-index: 5;
+	pointer-events: none;
+}
+
+.eGotHead1, .eGotHead2{
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 100%;
+	justify-content: center;
+	height: 50%;
+}
+
+.headSec1{
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 20%;
+	justify-content: center;
+	height: 100%;
+}
+
+.headSec2{
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 60%;
+	justify-content: center;
+	height: 100%;
+}
+
+.gotStartup{
+	position: relative;
+	width: 100%;
+	height: 70px;
+	top: 0;
+	left: 0;
+	float: left;
+	background-color: transparent;
+	z-index: 1;
+}
+
+.MRECin1eGot, .MRECin2eGot, .MRECin3eGot{
+	position: relative;
+	height: 265px;
+	top: 0;
+	left: 0;
+	float: left;
+	background-color: transparent;
+}
+
+.MRECin1eGot{
+	width: 30%;
+}
+
+.MRECin2eGot{
+	width: 40%;
+}
+
+.MRECin3eGot{
+	width: 30%;
+}
+
+/* globe gif containers start */
+/* GlobeCon is lightglobe and Earth gif container */
+/* globeGifCon Earth gif container */
+.globeGifCon{
+	position: relative;
+	margin: auto;
+	padding: auto;
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+/* GlobeOver is blur over Earth overlay - Earth's atmosphere rep */
+.GlobeOver{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin: 25px auto auto auto;
+	padding: auto;
+	border: 10px solid #34FBFF;
+	border-radius: 50%;
+	opacity: .88;
+	filter: blur(5px);
+  	-webkit-filter: blur(3px);
+}
+/* globe gif containers end */
+
+/* switch containers start */
+.eGotSwitch{
+	position: relative;
+	width: 25%;
+	height: 75px;
+	margin-bottom: 0 !important;
+	left: 0;
+	float: left;
+	background-color: transparent;
+	z-index: 4;
+}
+
+/* off switch container */
+#switchBtn{
+	position: absolute;
+	margin: -21px 0 0 54px;
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+}
+
+/* this is the div container that opens from switchBtn */
+#switchD{
+	position: absolute;
+	width: 182px;
+	height: 225px;
+	margin: -2px 0 0 -180px;
+	overflow: visible !important;
+	float: left;
+}
+
+/* lightOff is the unlit globe svg div container */
+.lightOff{
+	position: relative;
+	width: 100%;
+	height: 260px;
+	margin: -220px 0 0 0;
+	float: left;	
+	background-color: transparent;
+}
+
+/* this is blur glow overlay 2 - blue blurred 'lamp' circle that opens on lightswitch click */
+.GlobeOver2{
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	margin: -240px 0 0 -110px;
+	border-radius: 50%;
+	opacity: .3;
+	filter: blur(8px);
+  	-webkit-filter: blur(8px);
+	background-color: #6364ff;	
+	z-index: 1;
+	pointer-events: none;
+}
+
+/* contains 'on switch' svg */
+.ONbtn{
+	position: absolute;
+	margin: -218px 0 0 237px;
+	width: 45px;
+	height: 45px;
+    background: #F2FF00;
+	border-radius: 10%;
+	background-color: transparent;	
+	pointer-events: none;
+}
+/* switch containers end */
+
+.industryCon{
+	width: 450px;
+	height: 450px;
+	margin: -242px 0 0 -136px;
+	position: absolute;
+	float: left;
+	pointer-events: none;
+}
+
+/* Reg button containers start */
+.MRECRegConeGot{
+	position: relative;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	height: auto;
+	top: auto;
+	left: 0;
+	float: left;
+	background: #40d700;
+	z-index: 6;
+}
+
+.regBtneGot, .regBtnTBH{
+	position: relative;
+	width: auto;
+	height: auto;
+	text-align: center;
+	font-weight: 600;
+	letter-spacing: 4px;
+	font-size: 1.5em;
+}
+
+.regBtneGot:hover{
+	background: #05004d;
+}
+
+.regBtnTBH:hover{
+	background: #ff5a6c !important;
+}
+/* Reg button containers end */
+
+.eGotYou{
+	position: relative;
+	width: 100%;
+	height: 70px;
+	left: 0;
+	float: left;
+	background-color: transparent;
+}
+
+.MRECeGotfootCon{
+	position: relative;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 35px;
+	float: left;
+	background-color: transparent;
+}
+
+.disInner{
+	position: relative;
+	width: 425px;
+	height: 40px;
+	top: 5px;
+	left: 12.5px;
+	float: left;
+}
+
+.disLogo{
+	position: relative;
+	width: 20%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+}
+
+.star{
+	position: absolute;
+	width: 1.5px; /* Breite eines Sterns */
+	height: 1.5px; /* Höhe eines Sterns */
+	background-color: #766396; /* Farbe der Sterne (weiß) */
+	border-radius: 50%; /* Rundung für Sterneffekt */
+	animation: twinkling 3s infinite; /* Twinkle-Animation */
+}
+
+/* Keyframes für das Twinkling */
+@keyframes twinkling{
+0% {
+	opacity: 0; /* Anfangsopazität auf 0 */
+}
+50% {
+	opacity: 1; /* Halbzeit mit voller Opazität */
+}
+100% {
+	opacity: 0; /* Endet mit 0 Opazität */
+}
+}                
+/* eGotU banner end */
+
+.phoneContact, .emailContact{
+	color: #05004d; 
+	background-color: #fff;  
+	padding: 5px;
+	border-radius: 15px;
+	text-decoration: none !important;
+}
+
+.phoneContact:hover, .emaiContact:hover{
+	color: #fff !important; 
+	background-color: #8bbee5;  
+	text-decoration: none !important;	
+}  
+
+/* BMB banner start */
+.mobMRECBMB{
+	position: absolute;
+	width: 450px;
+	height: 450px;
+	align-content: center;
+	margin: 50px 0 0 50px;
+	background: #0036d4;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 77, 0.9);
+}
+
+.MRECheadBMB{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	float: left;
+	overflow: visible;
+	z-index: 3;
+}
+
+.MREChead1BMB, .MREChead2BMB, .MREChead3BMB{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	float: left;
+	z-index: 3;
+	overflow: visible;
+}
+
+.MREChead1BMB{
+	width: 10%;
+}
+
+.MREChead2BMB{
+	width: 80%;
+	overflow: visible;
+}
+
+.MREChead3BMB{
+	width: 10%;
+}
+
+.MRECctaBMB{
+	position: absolute;
+	width: 98px;
+	height: 98px;
+	align-content: center;
+	top: 12.5px;
+	left: 12.5px;
+	z-index: 3;
+}
+  
+  /* ribbonBMB start */
+  .ribbonBMB {
+	position: absolute;
+	left: -5px;
+	top: -5px;
+	z-index: 1;
+	overflow: hidden;
+	width: 75px;
+	height: 75px;
+	text-align: right;
+	z-index: 9999;
+  }
+  
+  .ribbonBMB span {
+	font-size: 10px;
+	font-weight: bold;
+	color: #0036D4;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 20px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	width: 100px;
+	display: block;
+	background: linear-gradient(#ff0 0%, #ff0 50%, #dbb471 100%);
+	box-shadow: 0 3px 10px -5px #0036D4;
+	position: absolute;
+	top: 19px; left: -21px;
+  }
+  
+  .ribbonBMB span::before {
+	content: "";
+	position: absolute; left: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid #dbb471;
+	border-right: 3px solid transparent;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #dbb471;
+  }
+  .ribbonBMB span::after {
+	content: "";
+	position: absolute; right: 0px; top: 100%;
+	z-index: -1;
+	border-left: 3px solid transparent;
+	border-right: 3px solid #dbb471;
+	border-bottom: 3px solid transparent;
+	border-top: 3px solid #dbb471;
+  }
+  /* ribbonBMB end */
+
+.MRECin1BMB, .MRECin2BMB, .MRECin3{
+	position: relative;
+	height: 260px;
+	top: 0;
+	left: 0;
+	float: left;
+}
+
+.MRECin1BMB{
+	width: 10%;
+}
+
+.MRECin2BMB{
+	width: 80%;
+}
+
+.MRECin3BMB{
+	width: 10%;
+}
+
+.MRECRegConBMB{
+	text-decoration: none !important;
+	position: relative;
+	width: 100%;
+	top: -53px;
+	padding: 1% auto;
+	font-size: .75em;
+	justify-content: center;
+	display: flex;
+	left: 0;
+	float: left;
+	background: #58c2e2;
+	z-index: 9999 !important;
+}
+
+.MRECRegCon1BMB, .MRECRegCon2, .MRECRegCon3BMB{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: auto;
+}
+
+.MRECRegCon1BMB, .MRECRegCon3BMB{
+	width: 135px;
+}
+
+.MRECRegCon2BMB{
+	width: 180px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.MRECRegCon2BMB:hover h3{
+	color: #fff !important;
+}
+
+.MRECRegCon2BMB:hover{
+	background: #6364ff !important;
+	cursor: pointer;
+}
+
+/* waves start */
+.waveCon{
+	width: 100%;
+	height: 280px;
+	position: relative;
+	top: -70px;
+	left: 0;
+	overflow: hidden !important;
+	background: #0036d4;
+  }
+  
+  #waves{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 6vh;
+  }
+  
+  .waves > use {
+	animation: move-forever 32s -32s linear infinite;
+  }
+  
+  .waves > use:nth-child(2) {
+	animation-delay: -10s;
+	animation-duration: 20s;
+  }
+  .waves > use:nth-child(3) {
+	animation-delay: -20s;
+	animation-duration: 10s;
+  }
+  
+  @keyframes move-forever {
+	0% {
+	  transform: translate(-90px, 0%);
+	}
+	100% {
+	  transform: translate(85px, 0%);
+	}
+  }
+  /* waves end */
+
+.MRECfootBMB{
+	position: relative;
+	margin-top: -45px;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	float: left;
+	background: #58c2e2;
+}
+
+.disParaBMB{
+	position: relative;
+	width: 80%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+	text-align: left;
+	font-size: 8px;
+	color: #fff;
+}
+
+.disInnerBMB{
+	position: relative;
+	width: 425px;
+	height: 40px;
+	top: 5px;
+	left: 12.5px;
+	float: left;
+}
+
+.disLogoBMB{
+	position: relative;
+	width: 20%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	float: left;
+}
+
+#CSFlinkBMB, #RWlinkBMB{
+	background-color: #0036d4;
+	text-decoration: none;
+	color: #58c2e2;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#CSFlinkBMB:hover, #RWlinkBMB:hover{
+	background-color: #05004d;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.bottomConBMB{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background: #58c2e2;
+  }
+/* BMB banner end */
+
+/* footer style start */
+.navFooter{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	z-index: 60000;
+	-webkit-box-shadow: 8px 0 0 0 rgba(5,0,77,0.37);
+	-moz-box-shadow: 8px 0 0 0 rgba(5,0,77,0.37);
+	box-shadow: 8px 0 0 0 rgba(5,0,77,0.37);
+	box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+	-webkit-box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+	-moz-box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+}
+/* footer style end */
+
+/* disclaimer link style start */
+#CSFlink, #RWlink{
+	background-color: #fff;
+	text-decoration: none;
+	color: #05004d;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#CSFlink:hover, #RWlink:hover{
+	background: #05004d;
+	color: #fff;
+}
+/* disclaimer link style end */
+
+@media screen and (max-width: 2150px){
+
+.spaceDivMQ{
+	display: flex;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 80px;
+}
+
+.spaceDiv{
+	display: none !important;
+}
+}
+
+@media screen and (max-width: 1920px){
+
+.NavThird1{
+	width: 40%;
+}
+
+.NavThird2{
+	width: 20%;
+}
+
+.NavThird3{
+	width: 40%;
+}
+
+.mastheadCon{
+	top: 0;
+}
+
+.titleMast{
+	margin-top: 20% !important;
+}
+
+#contentEmail{
+	height: 5430px !important;
+}
+
+.logoFoot{
+    width: 100%;
+    margin: .01% 0 0 1% !important;
+    left: 0;
+}	
+
+/* qual slider start */	
+.qualSlider{
+	width: 317px;
+	height: 155px;
+}
+
+.qualSlide{
+	top: 0;
+}
+	
+.qualConCard{
+	top: 4px;
+	left: 34.5px;
+	width: 250px;
+	height: 155px;
+}
+/* qual slider end */
+
+.qualSliderequitise{
+  width: 100% !important;
+}
+
+#qualSliderBN{
+	width: 100% !important;
+}
+}
+
+@media screen and (max-width: 1440px){
+
+.scrSpaceCol1, .scrSpaceCol3{
+    display: none;
+}
+    
+.scrSpaceCol2{
+    top: 25px;
+    width: 100%;
+}
+
+.titleMast{
+	margin-top: 10% !important;
+}
+
+.mastheadCon1{
+	display: none;
+}
+
+.mastheadCon2{
+	width: 100%;
+}
+
+.paraConMQ{
+	padding-top: 15vh !important;
+}
+
+.logoFoot{
+    margin: .3% 0 0 0 !important;
+    height: 36px;
+}
+
+#contentEmail{
+	height: 5510px !important;
+}
+
+.qualConHLbottom, .cvConHLbottom{
+	visibility: hidden;
+}
+
+/* qual slider start */
+.qualSlider{
+	width: 295px;
+	height: 116px;
+}	
+		
+.qualSlide{
+	top: 3px;
+}
+	
+.qualConCard{
+	top: 2px;
+	left: 57.5px;
+	width: 180px;
+	height: auto;
+}
+/* qual slider end */
+
+.qualSliderequitise, #qualSliderBN{
+    width: 50% !important;
+}
+
+.qualSlideequitise{
+	left: 75px;/* change left position to keep it centered across mobile */
+}
+
+.qualSlideBN{
+	left: 75px !important;
+}
+}
+
+@media screen and (max-width: 1366px){
+
+.titleMast{
+   margin-top: 8% !important;
+}
+    
+.paraConMQ{
+    padding-top: 12vh !important;    
+}
+
+.navFooter{
+	display: none;
+}
+
+.spaceDivMQ{
+	height: 20px;
+}
+
+.spaceDiv{
+	display: none;
+}
+
+.qualSliderequitise, #qualSliderBN{
+    width: 45%;
+}
+
+.qualSlideequitise{
+	left: 56.5px;/* change left position to keep it centered across mobile */
+}
+
+.qualSlideBN{
+	left: 56.5px !important;
+}
+
+#contentEmail{
+	height: 6700px !important;
+}
+}	
+
+@media screen and (max-width: 1180px){
+
+.qualSlideequitise{
+	left: 10px;/* change left position to keep it centered across mobile */
+}
+
+.qualSlideBN{
+	left: 10px !important;
+}
+
+#contentEmail{
+	height: 7310px !important;
+}
+
+.buttonBanner > a{
+	padding: 1.1% .6% !important;
+}
+
+.success1, .success2{
+	font-size: 18px;
+} 
+
+.disPara{
+    padding-top: 5px;
+	font-size: 7px !important;
+}
+}
+
+@media screen and (max-width: 1080px){
+
+.NavThird1, .NavThird3{
+	width: 35%;
+}
+
+.NavThird2{
+	width: 30%;
+}
+
+#contentEmail{
+	height: 6630px;
+}
+
+.qualSliderequitise, #qualSliderBN{
+  	width: 85% !important;
+}
+
+.qualSlideequitise{
+	left: 125px !important;/* change left position to keep it centered across mobile */
+}
+
+.qualSlideBN{
+	left: 125px !important;
+}
+
+#contentEmail{
+	height: 6150px;
+}
+
+.mobMREC, .mobMRECeGot, .mobMRECBNbanner, .mobMRECBMB{
+	margin: 50px 0 0 35px;
+}
+}
+
+@media  screen and (max-width: 980px){
+
+.heading3980{
+	font-size: 3.5em;
+}
+
+.para980{
+	font-size: 3em;
+}
+
+h4{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+    
+p{
+    font-size: 2em;
+}
+    
+#contentEmail{
+	height: 11045px !important;
+}
+    
+.qualSlideequitise{
+	left: 124.5px !important;/* change left position to keep it centered across mobile */
+}
+
+.qualSlideBN{
+	left: 124.5px !important;
+}
+}
+
+@media screen and (max-width: 820px){
+
+.titleMast{
+	top: 2.5vh;
+}
+    
+.paraConMQ{
+    padding-top: 5.5vh !important;    
+}
+    
+.qualSlideequitise{
+  	left: 56.5px !important;/* change left position to keep it centered across mobile */
+}
+
+.qualSlideBN{
+	left: 56.5px !important;
+}
+      
+.mobMREC, .mobMRECeGot, .mobMRECBNbanner, .mobMRECBMB{
+  	margin: 50px 0 0 50px;
+}
+      
+#contentEmail{
+	height: 10945px !important;
+}   
+}  
+
+@media screen and (max-width: 720px){
+  /* METCON - contains metrics don't lie stats - start */
+.MetricCon{
+	position: relative;
+	width: auto;
+	height: 205px;
+	margin: auto;
+	float: left;
+}
+
+.MetricHead{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	float: left;
+	border-radius: 20px 20px 0 0;
+}
+}
+
+@media  screen and (max-width: 574px){
+
+body{
+	width: 574px !important;
+}
+
+.NavThird1, .NavThird3{
+	width: 35%;
+}
+
+.NavThird2{
+	width: 30%;
+}
+
+h3{
+	font-size: 1.7em !important;
+}
+
+p{
+	font-size: 1.4em !important;
+}
+
+.mastheadCon, mastheadCon2{
+	width: 574px !important;
+}
+
+mastheadCon1{
+	display: none !important;
+}
+
+.titleMast{
+	top: .09%;
+	width: 574px !important;
+	padding: 0 !important;
+}
+
+.paraConMQ{
+	margin-top: 15% !important;
+}
+
+.paraCon{
+	width: 574px !important;
+	padding: 15px 20px !important;
+}
+
+#contentEmail{
+	height: 7450px !important;
+}
+
+.MetricCon{
+  	height: 186px;
+}
+
+.MetGrid{
+  	height: 186px;
+  	/* grid-template-columns is width of columns */
+	grid-template-columns: 180px 180px 180px;
+	grid-gap: 4px 4px;
+}
+
+.MetGrid > div{
+	height: 180px !important;
+  	width: 180px;
+}
+
+.mileGridWrapper{
+	width: 180px;
+	height: 180px;
+}
+
+.success1, .success2{
+  	font-size: 8px;
+}
+
+.face{
+  	margin: 4% auto;
+}
+
+.qualSliderequitise, #qualSliderBN{
+  	width: 100% !important;
+}
+
+.qualSlideequitise{
+	left: 0 !important;/* change left position to keep it centered across mobile */
+}
+
+.qualSlideBN{
+	left: 0 !important;/* change left position to keep it centered across mobile */
+}
+
+.mobMREC, .mobMRECeGot, .mobMRECBNbanner, .mobMRECBMB{
+	margin: 50px 0 0 40px !important;
+}
+
+#contentEmail{
+	height: 7270px !important;
+}
+}
